@@ -1,5 +1,4 @@
 "use client";
-
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -9,7 +8,6 @@ export default function Home() {
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 100, damping: 30 });
   const springY = useSpring(mouseY, { stiffness: 100, damping: 30 });
-
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -26,12 +24,12 @@ export default function Home() {
     <main className="glassmorphic-body min-h-screen flex flex-col items-center justify-center text-gray-900 dark:text-gray-100 overflow-hidden relative">
       {/* Custom Cursor - Glowing Orb */}
       <div
-        className="fixed w-8 h-8 rounded-full bg-indigo-500 opacity-50 pointer-events-none mix-blend-difference transform -translate-x-1/2 -translate-y-1/2 z-50"
+        className="cursor-orb fixed w-8 h-8 rounded-full bg-indigo-500 opacity-50 pointer-events-none mix-blend-difference transform -translate-x-1/2 -translate-y-1/2 z-50"
         style={{ left: `${springX.get()}px`, top: `${springY.get()}px` }}
       />
       {/* Gradient Overlay for Mouse Tracking */}
       <div
-        className="absolute inset-0 pointer-events-none z-[5] opacity-60"
+        className="gradient-overlay absolute inset-0 pointer-events-none z-[5] opacity-60"
         style={{
           background: isClient
             ? `radial-gradient(circle at ${springX.get()}px ${springY.get()}px, #4b0082 0%, transparent 50%)`
