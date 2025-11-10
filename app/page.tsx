@@ -63,7 +63,7 @@ export default function Home() {
           <div className="glassmorphic-card info-card">
             <h2 className="text-3xl font-semibold mb-4 text-center">Experience</h2>
             <div className="job flex items-center">
-              <img className="job-icon w-8 h-8 mr-4 " src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GoDaddy_Logo_-_The_GO.svg/1200px-GoDaddy_Logo_-_The_GO.svg.png" alt="GoDaddy" />
+              <img className="job-icon w-8 h-8 mr-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GoDaddy_Logo_-_The_GO.svg/1200px-GoDaddy_Logo_-_The_GO.svg.png" alt="GoDaddy" />
               <div>
                 <h3 className="text-2xl font-medium">GoDaddy</h3>
                 <p className="text-lg font-medium">Creative Specialist</p>
